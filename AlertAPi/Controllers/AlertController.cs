@@ -1,5 +1,4 @@
-﻿using AlertAPi.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace AlertAPi.Controllers;
 
