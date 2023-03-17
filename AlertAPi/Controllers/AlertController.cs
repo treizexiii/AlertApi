@@ -14,10 +14,11 @@ public class AlertController : Controller
     }
     
     [HttpPost("{method}")]
-    public IActionResult Alert(string method)
+    public IActionResult Alert(string method, [FromBody] string body)
     {
         var ip = HttpContext.Connection.RemoteIpAddress;
         _logger.LogInformation("{Method} called from {@Ip}", method, ip);
+        _logger.LogInformation("Body: {@Body}", body);
         return Ok("AlertController.Alert() called");
     }
 }
